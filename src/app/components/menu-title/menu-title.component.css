@@ -1,0 +1,12 @@
+.menu__title__container > h1 {
+  margin: 16px;
+  font-size: 136px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+}
+
+.menu__title__container > hr {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
