@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { dataFake } from '../../data/dataFake';
 
 @Component({
   selector: 'app-content',
@@ -7,15 +8,36 @@ import { RouterLink } from '@angular/router';
   templateUrl: './content.component.html',
   styleUrl: './content.component.css'
 })
-export class ContentComponent {
+export class ContentComponent implements OnInit {
+  private id: string | null = '0';
   @Input()
-  imageCover: string = 'https://img.freepik.com/vetores-gratis/paisagem-noturna-do-oceano-lua-cheia-e-estrelas-brilham_107791-7397.jpg?t=st=1743643434~exp=1743647034~hmac=012bc5e5665d27e5f0a62570981f51220961f4597badcf079d5bec2afaeafbc8&w=1380';
+  imageCover: string = '';
   @Input()
-  imageSource: string = 'Freepik';
+  imageSource: string = 'Desconhecido';
   @Input()
-  imageAlt: string = 'image';
+  imageAlt: string = 'imagem';
   @Input()
-  contentTitle: string = 'Título do artigo';
+  contentTitle: string = '';
   @Input()
-  contentDescription: string = 'Descrição do artigo.';
+  contentDescription: string = '';
+
+  constructor(
+    private router: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.router.paramMap.subscribe(value => this.id = value.get('id'));
+    this.setValueToComponent(this.id);
+  }
+
+  setValueToComponent(id: string| null): void {
+    const [result] = dataFake.filter(data => data.id === id);
+    
+    if(result) {
+      this.imageCover = result.image;
+      this.imageSource = result.imageSource;
+      this.contentTitle = result.title;
+      this.contentDescription = result.description;
+    }
+  }
 }
