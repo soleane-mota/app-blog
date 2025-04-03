@@ -1,17 +1,18 @@
-<div class="small__card__container">
+<article class="small__card__container">
   <div class="image__title__container">
     <a href="#">
       <div class="small__card__image">
         <img
-          src="https://t3.ftcdn.net/jpg/05/85/86/44/360_F_585864419_kgIYUcDQ0yiLOCo1aRjeu7kRxndcoitz.jpg"
-          alt="image"
-          srcset=""
+        src="{{ imageCover }}"
+        alt="{{ imageAlt }}"
+        srcset=""
         />
       </div>
       <div class="small__card__title">
-        <h1>Lorem ipsum dolor sit amet</h1>
+        <sup>Fonte: {{ imageSource }}</sup>
+        <h1>{{ cardTitle }}</h1>
       </div>
     </a>
   </div>
   <hr />
-</div>
+</article>
