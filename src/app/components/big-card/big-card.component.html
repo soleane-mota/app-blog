@@ -2,19 +2,18 @@
   <a href="#">
     <div class="big__card__image">
       <img
-        src="https://img.freepik.com/vetores-gratis/paisagem-noturna-do-oceano-lua-cheia-e-estrelas-brilham_107791-7397.jpg?t=st=1743643434~exp=1743647034~hmac=012bc5e5665d27e5f0a62570981f51220961f4597badcf079d5bec2afaeafbc8&w=1380"
-        alt="image"
+        src="{{ imageCover }}"
+        alt="{{ imageAlt }}"
         srcset=""
       />
-      <sup>Fonte: https://img.freepik.com</sup>
+      <sup>Fonte: {{ imageSource }}</sup>
     </div>
     <div class="big__card__title">
-      <h1>Lorem ipsum dolor sit amet</h1>
+      <h1>{{ cardTitle }}</h1>
     </div>
     <div class="big__card__description">
       <p>
-        Sed imperdiet ex purus, at pharetra purus eleifend vel. Nunc vestibulum
-        eleifend dui, mattis vulputate ex mattis ac. In rutrum porta maximus.
+        {{ cardDescription }}
       </p>
     </div>
   </a>
