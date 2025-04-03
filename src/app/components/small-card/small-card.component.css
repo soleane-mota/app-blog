@@ -1,0 +1,28 @@
+.small__card__container {
+  /* border: solid red 2px; */
+  width: 700px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.image__title__container, a {
+  display: flex;
+  flex-direction: row;
+}
+
+.small__card__image > img {
+  width: 200px;
+  min-width: 200px;
+  margin-right: 16px;
+}
+
+.small__card__title > h1 {
+  font-size: 20px;
+}
+
+.small__card__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
