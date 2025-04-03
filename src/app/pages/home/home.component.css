@@ -1,5 +1,4 @@
 .articles__container {
-  /* border: solid yellowgreen 2px; */
   display: flex;
   justify-content: center;
 }
