@@ -1,0 +1,20 @@
+<div class="content__container">
+  <div class="content__cover">
+    <img
+      src="{{ imageCover }}"
+      alt="{{ imageAlt }}"
+      srcset=""
+    >
+    <sup>Fonte: {{ imageSource }}</sup>
+  </div>
+  <div class="content__title">
+    <h1>{{ contentTitle }}</h1>
+    <hr>
+  </div>
+  <div class="link__go__back">
+    <a [routerLink]="['']"><< Voltar</a>
+  </div>
+  <div class="content__description">
+    <p>{{ contentDescription }}</p>
+  </div>
+</div>
